@@ -67,11 +67,6 @@ module.exports = {
       },
     ]
   },
-  resolve: {
-    alias: {
-      AcceptComponents: path.resolve(__dirname, 'node_modules/accepts-components/'),
-    }
-  },
   devServer: {
     static: './App',
     open: true,

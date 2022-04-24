@@ -4,18 +4,19 @@
   "private": "true",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack serve"
+    "start": "webpack serve",
+    "test": "accept-front-lib"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.8",
+    "accept-front-lib": "https://github.com/kozloffevgen/accept-front-lib",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.3.1",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
     "mini-css-extract-plugin": "^2.5.2",
-    "accepts-components": "https://gitlab.com/inevitability.k/components",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "vue": "^2.6.14",
     "vue-cli": "^2.9.6",
