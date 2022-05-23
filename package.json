@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "private": "true",
   "scripts": {
-    "build": "accept-front-lib build",
-    "start": "accept-front-lib start"
+    "build": "accept-front-lib build"
   },
   "devDependencies": {
     "accept-front-lib": "https://github.com/kozloffevgen/accept-front-lib"
