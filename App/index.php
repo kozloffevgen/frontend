@@ -12,11 +12,12 @@
   <header>
     <div class="header-top">
       <div class="container">
-        
       </div>
     </div>
   </header>
-  <main></main>
+  <main>
+    <div id="App"></div>
+  </main>
   <footer></footer>
 </body>
 </html>
