@@ -1,10 +1,1 @@
-module.exports = {
-  extends: [
-    'stylelint-config-standard',
-    'stylelint-config-rational-order',
-  ],
-  plugins: ['stylelint-order', 'stylelint-less'],
-  rules: {
-    'string-quotes': 'single',
-  }
-}
+module.exports = require('./node_modules/accept-front-lib/linters/stylelint');

@@ -1257,7 +1257,7 @@
 
 "accept-front-lib@https://github.com/kozloffevgen/accept-front-lib":
   version "1.0.0"
-  resolved "https://github.com/kozloffevgen/accept-front-lib#3669680d75e92a3ba5fd5ee1c08960dfcede9688"
+  resolved "https://github.com/kozloffevgen/accept-front-lib#a45a7d006eafd572c51eeacb81f7d85b1df10a31"
   dependencies:
     "@babel/core" "^7.16.7"
     "@babel/preset-env" "^7.16.8"
@@ -1265,10 +1265,18 @@
     commander "^9.2.0"
     css-loader "^6.5.1"
     css-minimizer-webpack-plugin "^3.3.1"
+    eslint "^8.16.0"
+    eslint-loader "^4.0.2"
+    eslint-plugin-vue "^9.0.1"
     less "^4.1.2"
     less-loader "^10.2.0"
     less-plugin-glob "^3.0.0"
     mini-css-extract-plugin "^2.5.2"
+    stylelint "^14.8.3"
+    stylelint-config-rational-order "^0.1.2"
+    stylelint-config-standard "^25.0.0"
+    stylelint-less "^1.0.5"
+    stylelint-order "^5.0.0"
     uglifyjs-webpack-plugin "^2.2.0"
     vue "^2.6.14"
     vue-cli "^2.9.6"
