@@ -6,4 +6,4 @@ document.addEventListener('DOMContentLoaded', () => {
     el: '#app',
     render: h => h(App),
   });
-})
+});

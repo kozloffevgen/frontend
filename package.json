@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "private": "true",
   "scripts": {
-    "build": "stylelint **/*.less && accept-front-lib build"
+    "build": "stylelint **/*.less && eslint --ext js,vue src/ && accept-front-lib build"
   },
   "devDependencies": {
     "accept-front-lib": "https://github.com/kozloffevgen/accept-front-lib",
+    "eslint": "^8.16.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-vue": "^9.0.1",
     "stylelint": "^14.8.3",
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^25.0.0",
