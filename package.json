@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "private": "true",
   "scripts": {
-    "build": "accept-front-lib build"
+    "build": "stylelint **/*.less && accept-front-lib build"
   },
   "devDependencies": {
-    "accept-front-lib": "https://github.com/kozloffevgen/accept-front-lib"
+    "accept-front-lib": "https://github.com/kozloffevgen/accept-front-lib",
+    "stylelint": "^14.8.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-less": "^1.0.5",
+    "stylelint-order": "^5.0.0"
   }
 }
