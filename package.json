@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": "true",
   "scripts": {
-    "build": "stylelint **/*.less && eslint --ext js,vue src/ && accept-front-lib build"
+    "build": "stylelint **/*.less && eslint --ext js,vue src/ && accept-front-lib build",
+    "svg": "accept-front-lib svg"
   },
   "devDependencies": {
     "accept-front-lib": "https://github.com/kozloffevgen/accept-front-lib"
