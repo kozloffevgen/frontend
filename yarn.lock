@@ -1257,7 +1257,7 @@
 
 "accept-front-lib@https://github.com/kozloffevgen/accept-front-lib":
   version "1.0.0"
-  resolved "https://github.com/kozloffevgen/accept-front-lib#ef60d5f9d94e4cb8746da9334e557d22e141c116"
+  resolved "https://github.com/kozloffevgen/accept-front-lib#82d2dfb17161b9731e80deac195d3cd1185dbed9"
   dependencies:
     "@babel/core" "^7.16.7"
     "@babel/preset-env" "^7.16.8"
