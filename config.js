@@ -1,4 +1,3 @@
-/* eslint-disable-next-line */
 module.exports = { 
   styles: {
     'App/client/styles/client.min.css': './src/client/styles/index.less',

@@ -4,20 +4,20 @@
   ><meta charset="utf-8">
   <title>Project</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <script type="text/javascript" src="./client/scripts/client.min.js"></script>
   <link rel="stylesheet" href="./www/fonts.css">
   <link rel="stylesheet" href="./client/styles/client.min.css">
+  <?php 
+    $array = include('./www/data/initData.php');
+    if (empty($array)) return;
+
+    [$scriptsPaths, $initEvents] = $array;      
+
+    foreach($scriptsPaths as $key => $path) { ?>
+      <script type='text/javascript' src='<?=$path?>'></script>
+  <?php } ?>
 </head>
 <body>
-  <header>
-    <div class="header-top">
-      <div class="container">
-      </div>
-    </div>
-  </header>
-  <main>
-    <div id="App"></div>
-  </main>
-  <footer></footer>
+  <div id="app"></div>
 </body>
+  <?= $initEvents?>
 </html>
