@@ -1,0 +1,124 @@
+.menu-list {
+  @media @tablet-max {
+    max-width: 200px;
+    max-height: 500px;
+    padding-right: 12px;
+    overflow-y: auto;
+  }
+
+  @media @desktop {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__item {
+    @media @tablet-max {
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--color-border);
+    }
+  }
+
+  &__sublist {
+    @media @desktop {
+      &:hover {
+        > .menu-list__sublist-item {
+          display: block;
+        }
+      }
+
+      .menu-list {
+        display: block;
+      }
+    }
+  }
+
+  &__sublist-title {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @media @tablet-max {
+      justify-content: space-between;
+    }
+
+    @media @desktop {
+      gap: 4px;
+    }
+  }
+
+  &__sublist-icon {
+    @media @tablet-max {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__sublist-item {
+    background-color: var(--color-bg-default);
+
+    @media @tablet-max {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      width: 200px;
+      padding: 20px;
+      transform: translateX(100%);
+      transition: transform 0.5s ease;
+
+      &.open {
+        transform: translateX(0);
+      }
+    }
+
+    @media @desktop {
+      position: absolute;
+      display: none;
+      width: 100px;
+      box-shadow: 0 8px 16px 0 var(--color-box-shadow);
+
+      .menu-list__sublist,
+      .menu-list__item a {
+        position: relative;
+        display: block;
+        padding: 10px 20px;
+      }
+
+      & & {
+        top: 0;
+        left: 100%;
+      }
+    }
+
+    .menu-list__sublist-icon {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__sublist-item-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 44px;
+    padding-right: 24px;
+
+    @media @desktop {
+      display: none;
+    }
+  }
+
+  &__sublist-item-title {
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  &__sublist-item-icon {
+    position: absolute;
+    right: 0;
+
+    @media @desktop {
+      display: none;
+    }
+  }
+}
