@@ -1,3 +1,1 @@
-# my_project
-
-Проект
+# Проект: Landing Page
