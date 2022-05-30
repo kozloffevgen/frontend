@@ -39,6 +39,8 @@
 </template>
 
 <script>
+import getDeviceType from 'ComponentsJs/getDeviceType';
+
 export default {
   name: 'MenuList',
   props: {
@@ -50,7 +52,15 @@ export default {
       sublistSelector: '.menu-list__sublist',
       sublistItemSelector: '.menu-list__sublist-item',
       openClass: 'open',
+      isDesktop: getDeviceType() === 'DESKTOP',
     }
+  },
+  destroyed() {
+    document.querySelectorAll(this.sublistItemSelector).forEach((item) => {
+      item.classList.remove(this.openClass);
+    });
+    
+    return;
   },
   methods: {
     checkSubMenu(subMenu) {
@@ -59,17 +69,17 @@ export default {
     openSublist({ target }) {
       const item = target.closest(this.sublistSelector).querySelector(this.sublistItemSelector);
       
-      if (!item) return;
+      if (!item || this.isDesktop) return;
 
       item.classList.add(this.openClass);
     },
     closeSublist({ target }) {
       const item = target.closest(this.sublistItemSelector);
 
-      if (!item) return;
+      if (!item || this.isDesktop) return;
 
       item.classList.remove(this.openClass);
     }
-  }
+  },
 }
 </script>
