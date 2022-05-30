@@ -6,6 +6,9 @@ $scriptsPath = (glob("client/scripts/*"));
 $initEvents = 
 "
   <script type='text/javascript'>
+    if (window.InitPage) {
+      new InitPage(".json_encode($data).")
+    }
   </script>
 ";
 
