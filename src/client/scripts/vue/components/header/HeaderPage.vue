@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="header-top container">
-      <svg class="header__logo">
+      <svg class="header__logo logo">
         <use :href="`${data.svgSpriteSrc}/sprite.svg#logo`" />
       </svg>
       <MobileMenu v-if="!isDesktop" :data="data" />
