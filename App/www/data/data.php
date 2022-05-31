@@ -60,4 +60,22 @@ return [
       ],
     ],
   ],
+  'dataFooter' => [
+    'footerTop' => [
+      'svg' => './www/images/sprites/sprite.svg#logo',
+      'subtitle' => 'PT Dwidasa Samsara Indonesia',
+      'adress' => 'Ruko Jalur Sutera 12A No. 12
+                  <br>
+                  Alam Sutera Serpong, Tangerang 123123
+      ',
+      'title' => 'Contact',
+      'contacts' => 'Phone : +123(123)123-123
+                    <br>
+                    Fax : +123(123)123-123
+                    <br>
+                    Email : 123123@123123123.com
+      ',
+    ],
+    'footerBottomText' => 'Copyright © 2015 - Dwidasa Samsara Indonesia',
+  ],
 ];
