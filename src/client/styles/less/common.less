@@ -5,6 +5,9 @@ html:root {
 
   /* colors-bg */
   --color-bg-default: #fff;
+  --color-bg-btn: #ee4248;
+  --color-bg-btn-hover: #ff0009;
+  --color-bg-content: #f7f7f7;
 
   /* colors-link */
   --color-link: #19196a;
@@ -12,6 +15,11 @@ html:root {
 
   /* colors-border */
   --color-border: #a3a3a36b;
+
+  /* colors-text */
+  --color-text: #30444e;
+  --color-text-default: #fff;
+  --color-text-chosen: #ee4248;
 }
 
 body {
@@ -20,10 +28,21 @@ body {
   font-weight: 400;
   font-size: 16px;
   font-family: Roboto, sans-serif;
+
+  @media @desktop {
+    font-size: 20px;
+  }
+}
+
+h1 {
+  margin: 0;
+  font-weight: inherit;
+  font-size: inherit;
 }
 
 p {
   margin: 0;
+  color: var(--color-text);
 }
 
 a {

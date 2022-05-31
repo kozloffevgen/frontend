@@ -1,0 +1,25 @@
+.main-welcome {
+  margin: 0;
+  padding: 40px 0 60px;
+  background-color: var(--color-bg-content);
+
+  @media @desktop {
+    padding: 100px 0 120px;
+  }
+
+  &__image {
+    height: 264px;
+
+    @media @desktop {
+      height: 424px;
+    }
+  }
+
+  .container {
+    @media @desktop {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.main-product {
+  &__title {
+    text-align: center;
+  }
+
+  &__content {
+    @media @desktop {
+      display: flex;
+      gap: 40px;
+      align-items: start;
+    }
+  }
+
+  &__item-icon {
+    display: block;
+
+    @media @tablet-max {
+      margin: 0 auto 14px;
+    }
+
+    @media @desktop {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item-title,
+  &__item-text {
+    margin-bottom: 20px;
+  }
+
+  &__item-title {
+    font-weight: 600;
+    font-size: 20px;
+
+    @media @tablet-max {
+      text-align: center;
+    }
+
+    @media @desktop {
+      font-size: 24px;
+    }
+  }
+
+  &__btn {
+    @media @tablet-max {
+      margin-bottom: 30px;
+    }
+  }
+}
