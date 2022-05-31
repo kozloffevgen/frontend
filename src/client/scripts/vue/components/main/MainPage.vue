@@ -111,8 +111,6 @@ export default {
         }
         
         if (!this.modalTitle && !this.modalText && value.items) {
-          console.log(value.items);
-
           this.checkDeepData(value.items, dataName)
         }
       });

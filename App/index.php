@@ -2,12 +2,13 @@
 <html>
   <head
   ><meta charset="utf-8">
-  <title>Project</title>
+  <title>Demo Landing Page</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <link rel="stylesheet" href="./www/fonts.css">
   <link rel="stylesheet" href="./client/styles/client.min.css">
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link rel="shortcut icon" href="./www/images/favicon.ico" type="image/x-icon">
+
   <?php 
     $array = include('./www/data/initData.php');
     if (empty($array)) return;
