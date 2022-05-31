@@ -12,7 +12,8 @@
           </p>
           <VBtn 
             class="main-usage__btn button" 
-            :btnText="data.btnText" 
+            :btnText="data.btnText"
+            @click.native="openModal('firstBlock')"
           />
         </div>
       </div>
@@ -28,7 +29,8 @@
           <VBtn 
             class="main-welcome__btn button" 
             type="submit" 
-            :btnText="data.btnText" 
+            :btnText="data.btnText"
+            @click.native="openModal('secondBlock')"
           />
         </div>
       </div>
@@ -56,28 +58,84 @@
             <VBtn
               class="main-product__btn button" 
               :btnText="data.btnText"
+              @click.native="openModal(key)"
             />
           </div>
         </div>
       </div>
     </div>
+    <VModal :open="open" @updateOpen="updateModal">
+      <template #title>
+        <p class="modal-title" v-html="modalTitle" />
+      </template>
+      <template #content>
+        {{ modalText }}
+      </template>
+    </VModal>
   </main>
 </template>
 
 <script>
 import VBtn from 'ComponentsVue/VBtn/VBtn.vue';
+import VModal from 'ComponentsVue/VModal/VModal.vue';
 
 export default {
   name: 'MainPage',
   components: {
     VBtn,
+    VModal,
   },
   props: {
     data: [],
-  }
+  },
+  data() {
+    return {
+      modalTitle: '',
+      modalText: '',
+      open: false,
+    }
+  },
+  methods: {
+    openModal(dataName) {
+      Object.entries(this.data).forEach((item) => {
+        const [
+          name,
+          value,
+        ] = item;
+
+        if (dataName === name) {
+          this.modalTitle = value.title;
+          this.modalText = value.modalText;
+
+          return;
+        }
+        
+        if (!this.modalTitle && !this.modalText && value.items) {
+          console.log(value.items);
+
+          this.checkDeepData(value.items, dataName)
+        }
+      });
+
+      if (this.modalTitle && this.modalText ) return this.open = true;
+    },
+    checkDeepData(data, name) {
+      Object.entries(data).forEach((item) => {
+        const [
+          deepName,
+          deepValue,
+        ] = item;
+        if (deepName !== name) return;
+
+        this.modalTitle = deepValue.title;
+        this.modalText = deepValue.text;
+      });
+    },
+    updateModal() {
+      this.modalTitle = '';
+      this.modalText = '';
+      this.open = !this.open;
+    }
+  },
 }
 </script>
-
-<style>
-
-</style>
