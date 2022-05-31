@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="./www/fonts.css">
   <link rel="stylesheet" href="./client/styles/client.min.css">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
   <?php 
     $array = include('./www/data/initData.php');
     if (empty($array)) return;
