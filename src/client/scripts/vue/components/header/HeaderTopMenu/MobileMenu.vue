@@ -8,10 +8,10 @@
     >
       <use :href="`${data.svgSpriteSrc}/sprite.svg#menu`" />
     </svg>
-    <VModal 
+    <VModal
       :sidebar="true" 
       :open="open"
-      @updateOpen="openModal"
+      @update="closeModal"
     >
       <template #title>
         <p class="menu__title">
@@ -49,8 +49,11 @@ export default {
   },
   methods: {
     openModal() {
-      this.open = !this.open;
+      this.open = true;
     },
+    closeModal() {
+      this.open = false;
+    }
   }
 }
 </script>

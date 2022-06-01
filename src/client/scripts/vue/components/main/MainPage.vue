@@ -64,7 +64,7 @@
         </div>
       </div>
     </div>
-    <VModal :open="open" @updateOpen="updateModal">
+    <VModal :open="open" @update="updateModal">
       <template #title>
         <p class="modal-title" v-html="modalTitle" />
       </template>
@@ -115,7 +115,9 @@ export default {
         }
       });
 
-      if (this.modalTitle && this.modalText ) return this.open = true;
+      if (this.modalTitle && this.modalText ) {
+        this.open = true;
+      }
     },
     checkDeepData(data, name) {
       Object.entries(data).forEach((item) => {
@@ -132,7 +134,7 @@ export default {
     updateModal() {
       this.modalTitle = '';
       this.modalText = '';
-      this.open = !this.open;
+      this.open = false;
     }
   },
 }
